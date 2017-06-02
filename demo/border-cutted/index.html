@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Border Cutted</title>
+	<style type="text/css">
+		body {
+			font-family: 'Segoe UI', sans-serif;
+		}
+		.box {
+			position: relative;
+			max-width: 480px;
+			margin: 50px auto;
+		}
+		.box:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			content: '';
+			display: block;
+		}
+
+		.image {
+			display: block;
+			width: 100%;
+		}
+		.inside {
+			position: absolute;
+			left: 10px;
+			right: 10px;
+			top: 10px;
+			bottom: 10px;
+			border-top: 5px solid #FFF;
+			border-right: 5px solid #FFF;
+			border-bottom: 5px solid #FFF;
+			overflow: hidden;
+		}
+		.text {
+			color: #FFF;
+			position: absolute;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			padding-right: 20px;
+			bottom: 0;
+			font-size: 20px;
+		}
+		.text:before {
+			content: '';
+			width: 5px;
+			display: block;
+			background-color: #FFF;
+			height: 1000px; /* big */
+			left: 0;
+			bottom: 100%;
+			position: absolute;
+		}
+		.text:after {
+			content: '';
+			width: 5px;
+			display: block;
+			background-color: #FFF;
+			height: 1000px;  /* big */
+			left: 0;
+			top: 100%;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img class="image" src="https://source.unsplash.com/random/600x400">
+		<div class="inside">
+			<h3 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua</h3>
+		</div>
+	</div>
+</body>
+</html>
